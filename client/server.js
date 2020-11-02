@@ -3,8 +3,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
+// app.use(express.json());
+
 const port = process.env.PORT || 9000;
-// app.use(bodyParser.json());
 app.use(cors()); // Cross Origin Resource Sharing
 
 app.get("/", (req, res) => {
@@ -14,6 +15,10 @@ app.get("/", (req, res) => {
 app.get("/api/data", (req, res) => {
     const json = { result: "true" };
     res.json(json);
+});
+
+app.get("/", (req, res) => {
+    console.log("Welcome to Mern-Stack");
 });
 
 // listen
