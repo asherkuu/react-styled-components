@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/data", (req, res) => {
     const json = { result: "true" };
-    res.send(json);
+    res.json(json);
 });
 
 // listen
