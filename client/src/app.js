@@ -3,11 +3,10 @@ import { FooterContainer } from "./containers/footer";
 import { JumbotronContainer } from "./containers/jumbotron";
 
 export default function App() {
+    console.log("Welcome");
     useEffect(() => {
-        fetch("/api/data")
-            .then((res) => res.json())
-            .then((res) => console.log(res));
-    });
+        fetch("/api/data").then((res) => console.log(res));
+    }, []);
 
     return (
         <>
